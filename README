@@ -10,3 +10,15 @@ arduino 1.6.5.
 It might be possible to still
 compile under cygwin on windows,
 but this was only tested on linux.
+
+# Compile on macOS Catalina 10.15.6
+
+```
+git clone --recursive https://github.com/urjaman/frser-teensyflash.git
+cd frser-teensyflash/
+nano Makefile 
+# Edit the TEENSYDIR path to include your arduino directory, for me TEENSYDIR = /Applications/Teensyduino.app/Contents/Java/hardware/tools
+# Edit the AR path, for me AR = $(TEENSYDIR)/arm/arm-none-eabi/bin/ar
+make
+make program-cli
+```
